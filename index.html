@@ -2,6 +2,9 @@
 <head>
     <script>
         let answ
+        let q = 0
+        let p = 0
+        let n = 0
         function GU() {
             // document.getElementById("but").style.visibility="hidden";
             document.getElementById("input").style.visibility="visible";
@@ -39,10 +42,18 @@
             if (document.getElementById("input").value == answ) {
                 console.log("ok", answ, document.getElementById("input").value)
                 document.getElementById("prover").style.background="green"
+                q = q + 1
+                p = p + 1
+                document.getElementById("vsego").innerHTML="Всего ответов:" + q
+                document.getElementById("prav").innerHTML="Решённые верно:" + p
             }
             else {
                 console.log("neok", answ, document.getElementById("input").value)
                 document.getElementById("prover").style.background="red"
+                q = q + 1
+                n = n + 1
+                document.getElementById("vsego").innerHTML="Всего ответов:" + q
+                document.getElementById("neprav").innerHTML="Решённые неверно:" + n
             }
         }
         function GC() {
@@ -68,6 +79,9 @@
             </div>
             <button style="display: flex; width: 482px; height: 74px; font-size: 40px; font-family: 'Roboto', sans-serif; margin-left: 240px; margin-top: 30px; border-radius: 10px; background-color: #BCF9AD;" id="but0" onclick="GB()">проверить</button>
             <button style="display: flex; width: 482px; height: 74px; font-size: 40px; font-family: 'Roboto', sans-serif; margin-left: 240px; margin-top: 30px; border-radius: 10px; background-color: #BCF9AD;" id="but1" onclick="GC()">следующий пример</button>
+            <div style="display: flex; width: 360px; height: 50px; font-size: 30px; font-family: 'Roboto', sans-serif; margin-left: 240px; margin-top: 30px; border-radius: 10px; background-color: #BCF9AD;" id="vsego">Всего примеров:</div>
+            <div style="display: flex; width: 360px; height: 50px; font-size: 30px; font-family: 'Roboto', sans-serif; margin-left: 240px; margin-top: 30px; border-radius: 10px; background-color: #BCF9AD;" id="prav">Решённые верно:</div>
+            <div style="display: flex; width: 360px; height: 50px; font-size: 30px; font-family: 'Roboto', sans-serif; margin-left: 240px; margin-top: 30px; border-radius: 10px; background-color: #BCF9AD;" id="neprav">Решённые неверно:</div>
         <!-- <div style="display: flex; flex-direction: column;">
             <div style="display: flex; font-size: 75px;" id="urav">пример</div>
             <div style="display: flex; font-size: 75px;" id="otv">ваш ответ:</div>
