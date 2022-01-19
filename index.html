@@ -73,6 +73,40 @@
             GU()
         }
     </script>
+        <style>
+            .class0{
+                display: flex;
+                width: 482px;
+                height: 74px;
+                font-size: 40px;
+                font-family: 'Roboto', sans-serif;
+                margin-top: 30px;
+                border-radius: 10px;
+                background-color: #BCF9AD;
+            }
+            .class1 {
+                display: flex;
+                width: 360px;
+                height: 50px;
+                font-size: 30px;
+                font-family: 'Roboto', sans-serif;
+                margin-top: 30px;
+                border-radius: 10px;
+                background-color: #BCF9AD;
+            }
+            .class2 {
+                display: flex;
+                width: 100px;
+                height: 100px;
+                font-size: 90px;
+                font-family: 'Roboto', sans-serif;
+                margin-top: 30px;
+                border-radius: 10px;
+                background-color: #BCF9AD;
+                flex-direction: row;
+                justify-content: center;
+            }
+        </style>
 </head>
 <body style="background-color: #D07878;">
     <div style="display: flex; width: 100%;">
@@ -88,32 +122,33 @@
                 </div>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <button style="display: flex; width: 482px; height: 74px; font-size: 40px; font-family: 'Roboto', sans-serif;  margin-top: 30px; border-radius: 10px; background-color: #BCF9AD;" id="but0" onclick="GB()">Перевірити</button>
-                <button style="display: flex; width: 482px; height: 74px; font-size: 40px; font-family: 'Roboto', sans-serif; margin-top: 30px; border-radius: 10px; background-color: #BCF9AD;" id="but1" onclick="GC()">Наступний приклад</button>
-                <button style="display: flex; width: 482px; height: 74px; font-size: 40px; font-family: 'Roboto', sans-serif; margin-top: 30px; border-radius: 10px; background-color: #BCF9AD;" id="but2" onclick="GD()">Очистити</button>
+                <button class="class0" id="but0" onclick="GB()">Перевірити</button>
+                <button class="class0" id="but1" onclick="GC()">Наступний приклад</button>
+                <button class="class0" id="but2" onclick="GD()">Очистити</button>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <div style="display: flex; width: 360px; height: 50px; font-size: 30px; font-family: 'Roboto', sans-serif;  margin-top: 30px; border-radius: 10px; background-color: #BCF9AD;" id="vsego">Всього прикладів:</div>
-                <div style="display: flex; width: 360px; height: 50px; font-size: 30px; font-family: 'Roboto', sans-serif; margin-top: 30px; border-radius: 10px; background-color: #BCF9AD;" id="prav">Вирішені правильно:</div>
-                <div style="display: flex; width: 360px; height: 50px; font-size: 30px; font-family: 'Roboto', sans-serif; margin-top: 30px; border-radius: 10px; background-color: #BCF9AD;" id="neprav">Вирішені неправильно:</div>
+                <div class="class1" id="vsego">Всього прикладів:</div>
+                <div class="class1" id="prav">Вирішені правильно:</div>
+                <div class="class1" id="neprav">Вирішені неправильно:</div>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
                 <div style="display: flex; flex-direction: row; justify-content: flex-start;">
-                    <button style="display: flex; width: 100px; height: 100px; font-size: 90px; font-family: 'Roboto', sans-serif; margin-top: 30px; border-radius: 10px; background-color: #BCF9AD;" id="1" onclick="GE(1)">1</button>
-                    <button style="display: flex; width: 100px; height: 100px; font-size: 90px; font-family: 'Roboto', sans-serif;  margin-top: 30px; border-radius: 10px; background-color: #BCF9AD; margin-left: 60px;" id="2" onclick="GE(2)">2</button>
-                    <button style="display: flex; width: 100px; height: 100px; font-size: 90px; font-family: 'Roboto', sans-serif;margin-top: 30px; border-radius: 10px; background-color: #BCF9AD; margin-left: 60px;" id="3" onclick="GE(3)">3</button>
+                    <button class="class2" id="1" onclick="GE(1)">1</button>
+                    <button class="class2" style="margin-left: 60px;" id="2" onclick="GE(2)">2</button>
+                    <button class="class2" style="margin-left: 60px;" id="3" onclick="GE(3)">3</button>
                 </div>
                 <div style="display: flex; flex-direction: row; justify-content: flex-start;">
-                    <button style="display: flex; width: 100px; height: 100px; font-size: 90px; font-family: 'Roboto', sans-serif; margin-top: 30px; border-radius: 10px; background-color: #BCF9AD;" id="4" onclick="GE(4)">4</button>
-                    <button style="display: flex; width: 100px; height: 100px; font-size: 90px; font-family: 'Roboto', sans-serif; margin-top: 30px; border-radius: 10px; background-color: #BCF9AD; margin-left: 60px;" id="5" onclick="GE(5)">5</button>
-                    <button style="display: flex; width: 100px; height: 100px; font-size: 90px; font-family: 'Roboto', sans-serif;  margin-top: 30px; border-radius: 10px; background-color: #BCF9AD; margin-left: 60px;" id="6" onclick="GE(6)">6</button>
-                </div><div style="display: flex; flex-direction: row; justify-content: flex-start;">
-                    <button style="display: flex; width: 100px; height: 100px; font-size: 90px; font-family: 'Roboto', sans-serif; margin-top: 30px; border-radius: 10px; background-color: #BCF9AD;" id="7" onclick="GE(7)">7</button>
-                    <button style="display: flex; width: 100px; height: 100px; font-size: 90px; font-family: 'Roboto', sans-serif;  margin-top: 30px; border-radius: 10px; background-color: #BCF9AD; margin-left: 60px;" id="8" onclick="GE(8)">8</button>
-                    <button style="display: flex; width: 100px; height: 100px; font-size: 90px; font-family: 'Roboto', sans-serif; margin-top: 30px; border-radius: 10px; background-color: #BCF9AD; margin-left: 60px;" id="9" onclick="GE(9)">9</button>
+                    <button class="class2" id="4" onclick="GE(4)">4</button>
+                    <button class="class2" style="margin-left: 60px;" id="5" onclick="GE(5)">5</button>
+                    <button class="class2" style="margin-left: 60px;" id="6" onclick="GE(6)">6</button>
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: flex-start;">
+                    <button class="class2" id="7" onclick="GE(7)">7</button>
+                    <button class="class2" style="margin-left: 60px;" id="8" onclick="GE(8)">8</button>
+                    <button class="class2" style="margin-left: 60px;" id="9" onclick="GE(9)">9</button>
                 </div>
                 <div style="display: flex; flex-direction: row; justify-content: flex-start; margin-bottom: 50px;">
-                    <button style="display: flex; width: 100px; height: 100px; font-size: 90px; font-family: 'Roboto', sans-serif; margin-top: 30px; border-radius: 10px; background-color: #BCF9AD;" id="9" onclick="GE(0)">0</button>
+                    <button class="class2" id="0" onclick="GE(0)">0</button>
                 </div>
             </div>
 
