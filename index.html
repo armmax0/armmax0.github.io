@@ -6,7 +6,6 @@
         let p = 0
         let n = 0
         function GU() {
-            // document.getElementById("but").style.visibility="hidden";
             document.getElementById("input").style.visibility="visible";
             let oper = ['-', '+'];
             function GA() {
@@ -17,11 +16,6 @@
                     a = Math.floor(Math.random() * 20);
                     b = Math.floor(Math.random() * 20);
                     c = Math.floor(Math.random() * oper.length);
-                    // if (a + b <= 10) {
-                    //     if (a - b >= 0) {
-                    //         break
-                    //     }
-                    // }
                     if (c == 0) {
                         answ = a - b
                     }
@@ -69,6 +63,44 @@
             let d = document.getElementById("input").value
             document.getElementById("input").value=(d + x)
         }
+        function GF() {
+            if (event.keyCode === 49) {
+                GE(1)
+            }
+            if (event.keyCode === 50) {
+                GE(2)
+            }
+            if (event.keyCode === 51) {
+                GE(3)
+            }
+            if (event.keyCode === 52) {
+                GE(4)
+            }
+            if (event.keyCode === 53) {
+                GE(5)
+            }
+            if (event.keyCode === 54) {
+                GE(6)
+            }
+            if (event.keyCode === 55) {
+                GE(7)
+            }
+            if (event.keyCode === 56) {
+                GE(8)
+            }
+            if (event.keyCode === 57) {
+                GE(9)
+            }
+            if (event.keyCode === 48) {
+                GE(0)
+            }
+            if (event.keyCode === 13) {
+                GB()
+            }
+            if (event.keyCode === 8) {
+                GD()
+            }
+        }
         window.onload = function() {
             GU()
         }
@@ -108,7 +140,7 @@
             }
         </style>
 </head>
-<body style="background-color: #D07878;">
+<body style="background-color: #D07878;" onkeydown="GF()">
     <div style="display: flex; width: 100%;">
         <div style="display: flex; flex-direction: column; width: 100%; height: 100%; justify-content: flex-start;">
             <div style="display: flex; flex-direction: row; justify-content: center; width: 100%;">
