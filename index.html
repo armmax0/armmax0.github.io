@@ -5,6 +5,7 @@
         let q = 0
         let p = 0
         let n = 0
+        let time1
         function GU() {
             document.getElementById("input").style.visibility="visible";
             let oper = ['-', '+'];
@@ -101,6 +102,43 @@
                 GD()
             }
         }
+        function fastGame() {
+            document.getElementById("time").style.visibility="visible"
+            document.getElementById("time1").style.visibility="visible"
+            document.getElementById("time2").style.visibility="visible"
+            document.getElementById("time3").style.visibility="visible"
+            document.getElementById("time4").style.visibility="visible"
+        }
+        function time(x) {
+            document.getElementById("time5").style.visibility="visible"
+            document.getElementById("start").style.visibility="visible"
+            document.getElementById("time5").innerHTML=x
+        }
+        function start() {
+            time1 = document.getElementById("time5").innerHTML
+            q = 0
+            p = 0
+            n = 0
+            document.getElementById("vsego").innerHTML = "Всього прикладів:"
+            document.getElementById("prav").innerHTML = "Вирішені правильно:"
+            document.getElementById("neprav").innerHTML = "Вирішені неправильно:"
+            document.getElementById("time").style.visibility="hidden"
+            document.getElementById("time1").style.visibility="hidden"
+            document.getElementById("time2").style.visibility="hidden"
+            document.getElementById("time3").style.visibility="hidden"
+            document.getElementById("time4").style.visibility="hidden"
+            document.getElementById("start").style.visibility="hidden"
+            setTimeout(function go() {
+                time1 = document.getElementById("time5").innerHTML = document.getElementById("time5").innerHTML - 1
+                if (time1 > 0) {
+                    setTimeout(go, 1000)
+                }
+                else {
+                    document.getElementById("time5").style.visibility="hidden"
+                    alert("гарна робота!")
+                }
+            }, 1000)
+        }
         window.onload = function() {
             GU()
         }
@@ -143,6 +181,16 @@
 <body style="background-color: #D07878;" onkeydown="GF()">
     <div style="display: flex; width: 100%;">
         <div style="display: flex; flex-direction: column; width: 100%; height: 100%; justify-content: flex-start;">
+            <div style="display: flex; flex-direction: row;">
+                <button style="display: flex; width: 200px; height: 100px; font-size: 30px; background-color: #BCF9AD; border-radius: 15px;" id="fastGame" onclick="fastGame()">режим швидкої гри</button>
+                <div id="time" style="display: flex; font-size: 30px; width: 200px; height: 100px; background-color: #BCF9AD; visibility: hidden; border-radius: 15px;">вибери кількість часу</div>
+                <button id="time1" style="display: flex; width: 80px; height: 60px; background-color: #BCF9AD; visibility: hidden; font-size: 30px; justify-content: center; border-radius: 15px;" onclick="time(10)">10с</button>
+                <button id="time2" style="display: flex; width: 80px; height: 60px; background-color: #BCF9AD; visibility: hidden; font-size: 30px; justify-content: center; border-radius: 15px;" onclick="time(15)">15с</button>
+                <button id="time3" style="display: flex; width: 80px; height: 60px; background-color: #BCF9AD; visibility: hidden; font-size: 30px; justify-content: center; border-radius: 15px;" onclick="time(20)">20с</button>
+                <button id="time4" style="display: flex; width: 80px; height: 60px; background-color: #BCF9AD; visibility: hidden; font-size: 30px; justify-content: center; border-radius: 15px;" onclick="time(30)">30с</button>
+                <button id="start" style="display: flex; width: 200px; height: 75px; background-color: #BCF9AD; font-size: 50px; justify-content: center; visibility: hidden; border-radius: 15px;" onclick="start()">старт</button>
+            </div>
+            <div id="time5" style="display: flex; align-self: flex-start; width: 200px; height: 100px; background-color: #e61620; font-size: 50px; justify-content: center; visibility: hidden; border-radius: 15px;">time</div>
             <div style="display: flex; flex-direction: row; justify-content: center; width: 100%;">
                 <div style="display: flex; font-size: 100px; font-family: 'Roboto', sans-serif;">Рахівничка</div>
             </div>
@@ -183,11 +231,7 @@
                     <button class="class2" id="0" onclick="GE(0)">0</button>
                 </div>
             </div>
-
-        <!-- <div style="display: flex; flex-direction: column;">
-            <div style="display: flex; font-size: 75px;" id="urav">пример</div>
-            <div style="display: flex; font-size: 75px;" id="otv">ваш ответ:</div>
-        </div> -->
+        </div>
     </div>
 </body>
 </html>
